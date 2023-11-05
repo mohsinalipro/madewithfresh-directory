@@ -32,7 +32,7 @@ Open the `directory.json` file and add your project details using the provided t
 
 #### Example Entry:
 
-\```json
+```json
 {
   "projects": [
     {
@@ -44,7 +44,7 @@ Open the `directory.json` file and add your project details using the provided t
     }
   ]
 }
-\```
+```
 
 ### 5. Commit Your Changes
 
