@@ -28,29 +28,23 @@ Change to the repository directory:
 
 ### 4. Add Your Entry
 
-Open the `directory.md` file and add your project details using the provided template.
+Open the `directory.json` file and add your project details using the provided template.
 
 #### Example Entry:
 
-```markdown
-## Your Project Title
-
-**Short Description:**
-Briefly describe your project.
-
-**Long Description:**
-Provide a more detailed description of your project, its features, and uniqueness.
-
-**URL:**
-[https://your-project-url.com/](https://your-project-url.com/)
-
-**Image:**
-![Your Project](https://your-image-url.com/)
-
-**Tags:**
-- tag1
-- tag2
-```
+\```json
+{
+  "projects": [
+    {
+      "title": "Your Project Title",
+      "shortDescription": "Briefly describe your project.",
+      "longDescription": "Provide a more detailed description of your project, its features, and uniqueness.",
+      "url": "https://your-project-url.com/",
+      "tags": ["tag1", "tag2"]
+    }
+  ]
+}
+\```
 
 ### 5. Commit Your Changes
 
