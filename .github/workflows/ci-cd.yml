@@ -1,0 +1,33 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install yup
+
+      - name: Validate JSON
+        run: node validate.js
+
+      - name: Commit Changes
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add directory.json
+          git commit -m "Update directory.json [skip ci]"
+          git push origin main
